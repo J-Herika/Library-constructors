@@ -23,6 +23,13 @@ function getBookData(){
   addBookToLibrary(book)
 }
 
+//how to display the array of books
+//step 1 get access to "book-details"
+//step 2 get access to the children elements like title,author,pages,status.
+//step 3 make a function that loops for every object book in the myLibrary
+// it will a div in "book-content" add to it the class "book-details".
+//step 4 and create a title,author,pages and status div.
+// step 5 now you can add the correct content to the div's you created up.
 
 function addBookToLibrary(bookToAdd){
   myLibrary.push(bookToAdd);
