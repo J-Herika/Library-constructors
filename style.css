@@ -46,17 +46,21 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 
-html , body{
-  width: 100%;
+html,body{
+  height: 100%;
 }
 
+
+
 .content{
+  height: 100%;
   display:grid;
   grid-template-columns: 1fr 4fr;
 
 }
 
 .getinfo-content{
+
   background-color: aqua;
 }
 .display-content{
