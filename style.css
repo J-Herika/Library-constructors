@@ -55,7 +55,7 @@ html,body{
 .content{
   height: 100%;
   display:grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: minmax(200px,1fr) minmax(1000px,4fr);
 
 }
 
@@ -65,4 +65,21 @@ html,body{
 }
 .display-content{
  background-color: grey;
+ padding: 60px 0px;
+ margin-left: 30px;
+ max-width: 100%;
+
+ display:grid;
+ grid-template-columns: repeat(auto-fit,400px);
+ grid-template-rows: repeat(3, minmax(200px, 1fr));
+ gap: 30px;
+}
+.book-content{
+  background-color: antiquewhite;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+}
+.book-img{
+  background-color: black;
 }
