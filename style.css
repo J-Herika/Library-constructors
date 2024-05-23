@@ -61,14 +61,20 @@ h6 {
   isolation: isolate;
 }
 
+:root {
+  --silver: #c0c0c0;
+  --anti-white: #ebebeb;
+  --black: #1e1e24;
+}
+
 html,
 body {
   height: 100%;
   font-family: "roboto", sans-serif;
 }
 body {
-  max-height: 100%;
   min-height: 100%;
+  background-color: var(--anti-white);
 }
 
 .content {
@@ -78,34 +84,45 @@ body {
 }
 
 .getinfo-content {
-  background-color: aqua;
-
+  background-color: var(--black);
+  color: var(--silver);
   display: grid;
   align-content: center;
   justify-content: center;
-  gap: 30px
 }
 ul {
   list-style-type: none;
   display: grid;
 
-  gap:90px;
+  gap: 60px;
   padding: 60px 0;
   justify-content: center;
 }
 li {
   display: grid;
-  gap:10px
+  gap: 10px;
+}
+label {
+  color: var(--anti-white);
 }
 li label {
   justify-self: center;
   font-size: 2rem;
-  font-weight:700;
+  font-weight: 700;
 }
-li input{
-  display: inline-block;
+li input {
+  border-radius: 10px;
+  padding: 5px 10px;
 }
-.pages{
+.submit-button-class {
+  padding-top: 60px;
+}
+#submit-button {
+  padding: 10px 5px;
+  border-radius: 10px;
+  border-style: none;
+}
+.pages {
   max-width: 190px;
   text-align: center;
   line-height: 1;
@@ -134,7 +151,7 @@ li input{
   background-color: black;
   margin: 1.5%;
 }
-.book-img img{
+.book-img img {
   max-height: 0px;
   border-radius: 20px;
 }
