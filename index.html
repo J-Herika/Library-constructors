@@ -12,7 +12,28 @@
 
   <div class="content">
     <div class="getinfo-content">
-      <button class="add-book">Add a Book</button>
+      <!-- <button class="add-book">Add a Book</button> -->
+      <form action="get">
+        <ul>
+          <li>
+            <input type="text" id="title" name="title" placeholder="Harry Potter">
+            <label for="title"></label>
+          </li>
+          <li>
+            <input type="text" id="author" name="author">
+            <label for="author"></label>
+          </li>
+          <li>
+            <input type="number" id="pages" name="pages">
+            <label for="pages"></label>
+          </li>
+          <li>
+            <input type="button" id="status" name="status">
+            <label for="status"></label>
+          </li>
+        </ul>
+      </form>
+
     </div>
     <div class="display-content">
       <div class="book-content">
@@ -24,7 +45,7 @@
           <div class="status">status</div>
         </div>
       </div>
-      <div class="book-content"></div>
+
      
     </div>
   </div>
