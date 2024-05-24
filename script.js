@@ -53,19 +53,26 @@ function addBookToLibrary(bookToAdd) {
 
 function displayBooks() {
   let book = myLibrary.at(-1)
-  let bookContainer = bookContent.cloneNode(true);
+ if(book.title !='' && book.author !='' && book.status != '')
+  {
+    let bookContainer = bookContent.cloneNode(true);
 
-  let title = bookContainer.querySelector(".title");
-  let author = bookContainer.querySelector(".author");
-  let pages = bookContainer.querySelector(".pages");
-  let status = bookContainer.querySelector(".status");
-
-  title.textContent = book.title;
-  author.textContent = `Author: ${book.author}`;
-  pages.textContent = `Pages: ${book.numOfPages}`;
-  status.textContent = `Status: ${book.readStatus}`;
-
-  displayContent.appendChild(bookContainer);
+    let title = bookContainer.querySelector(".title");
+    let author = bookContainer.querySelector(".author");
+    let pages = bookContainer.querySelector(".pages");
+    let status = bookContainer.querySelector(".status");
+  
+    title.textContent = book.title;
+    
+    author.textContent = `Author: ${book.author}`;
+    pages.textContent = `Pages: ${book.numOfPages}`;
+    status.textContent = `Status: ${book.readStatus}`;
+  
+    displayContent.appendChild(bookContainer);
+  }
+  else{
+    alert('You have to fill the TITLE,AUTHOR and choose a STATUS')
+  }
 }
 
 

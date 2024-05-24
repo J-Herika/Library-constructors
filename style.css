@@ -74,13 +74,14 @@ body {
 }
 body {
   min-height: 100%;
-  background-color: var(--anti-white);
+  background-color: var(--black);
 }
 
 .content {
   height: 100%;
   display: grid;
   grid-template-columns: minmax(200px, 1fr) minmax(1000px, 4fr);
+  background-color: var(--black);
 }
 
 .getinfo-content {
@@ -89,6 +90,8 @@ body {
   display: grid;
   align-content: center;
   justify-content: center;
+
+  border-right: 3px solid var(--silver)
 }
 ul {
   list-style-type: none;
@@ -132,15 +135,16 @@ li input {
 .display-content {
   margin-left: 30px;
   max-width: 100%;
-  max-height: 100vh;
+  height: 100%;
+  padding: 60px 20px;
   gap: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 400px);
   grid-template-rows: repeat(3, minmax(200px, 1fr));
 }
 .book-content {
-  background-color: antiquewhite;
-  border: 3px solid black;
+  background-color: var(--anti-white);
+  border: 3px solid var(--silver);
   border-radius: 10px;
 
   display: grid;
@@ -149,10 +153,15 @@ li input {
 }
 .book-img {
   background-color: black;
-  margin: 1.5%;
+  padding: 1px;
+  border-radius: 10px;
+  max-height: 100%;
+  min-height: 60%;
+  max-width: 100%;
+  min-width: 60%;
 }
 .book-img img {
-  max-height: 0px;
+  height: 100%;
   border-radius: 20px;
 }
 .book-details {
@@ -167,4 +176,8 @@ li input {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: fit-content(100%) 1fr;
+}
+.title  , .author , .pages , .status{
+  font-size: 1.3rem;
+  font-weight: 700;
 }
