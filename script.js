@@ -9,7 +9,9 @@ let title = bookDetails.querySelector(".title");
 let author = bookDetails.querySelector(".author");
 let pages = bookDetails.querySelector(".pages");
 let status = bookDetails.querySelector(".status");
-let deleteButton = bookDetails.querySelector('.delete-book');
+let deleteBook = bookDetails.querySelector('.delete-book')
+
+
 
 let bookForm = document.querySelector('.book-form');
 let formTitle = bookForm[0];
@@ -19,12 +21,13 @@ let formStatus = bookForm[3];
 let formButton = bookForm[4];
 
 
-function Book(title, author, numOfPages, readStatus) {
+function Book(title, author, numOfPages, readStatus , deleteBook) {
   //the constructor
   this.title = title;
   this.author = author;
   this.numOfPages = numOfPages;
   this.readStatus = readStatus;
+  this.deleteBook = deleteBook;
 }
 
 function getBookData() {
@@ -78,8 +81,8 @@ function displayBooks() {
 
 
 //button for adding a new book
-formButton.addEventListener('click', getBookData)
-deleteButton.addEventListener('click', console.log('delete'))
+formButton.addEventListener('click', getBookData);
+
 
 
 

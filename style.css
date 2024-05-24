@@ -80,7 +80,7 @@ body {
 .content {
   height: 100%;
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) minmax(1000px, 4fr);
+  grid-template-columns: minmax(200px, 1fr) minmax(1000px, 5fr);
   background-color: var(--black);
 }
 
@@ -180,4 +180,17 @@ li input {
 .title  , .author , .pages , .status{
   font-size: 1.3rem;
   font-weight: 700;
+}
+.buttons{
+  display:grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+}
+.delete-book , .change-status{
+  background-color:var(--black);
+  color:var(--anti-white);
+  border: 3px solid var(--black);
+  border-radius: 10px;
 }
