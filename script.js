@@ -9,6 +9,7 @@ let title = bookDetails.querySelector(".title");
 let author = bookDetails.querySelector(".author");
 let pages = bookDetails.querySelector(".pages");
 let status = bookDetails.querySelector(".status");
+let deleteButton = bookDetails.querySelector('.delete-book');
 
 let bookForm = document.querySelector('.book-form');
 let formTitle = bookForm[0];
@@ -78,6 +79,7 @@ function displayBooks() {
 
 //button for adding a new book
 formButton.addEventListener('click', getBookData)
+deleteButton.addEventListener('click', console.log('delete'))
 
 
 
